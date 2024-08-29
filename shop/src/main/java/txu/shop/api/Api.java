@@ -9,5 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class Api {
     @GetMapping("/health-check")
     public void healthcheck(){
+        return;
     }
 }
