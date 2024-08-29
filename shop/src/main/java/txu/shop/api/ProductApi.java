@@ -15,7 +15,8 @@ import java.util.List;
 //@CrossOrigin
 //@CrossOrigin(origins = "*")
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
-@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+//@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/product")
 @RequiredArgsConstructor

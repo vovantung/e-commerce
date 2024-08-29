@@ -11,7 +11,8 @@ import txu.shop.service.CategoryService;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+//@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @Slf4j
 @RestController
 @RequiredArgsConstructor
