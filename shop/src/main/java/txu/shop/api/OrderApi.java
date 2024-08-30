@@ -13,10 +13,10 @@ import txu.shop.service.OrderService;
 
 import java.util.Date;
 import java.util.List;
-
+@CrossOrigin(origins = "https://main.d229jj886cbsbs.amplifyapp.com", allowedHeaders = "*")
 //@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 @Slf4j
 @RestController
 @RequiredArgsConstructor

@@ -11,13 +11,13 @@ import txu.shop.entity.ProductEntity;
 import txu.shop.service.ProductService;
 
 import java.util.List;
-
+@CrossOrigin(origins = "https://main.d229jj886cbsbs.amplifyapp.com", allowedHeaders = "*")
 //@CrossOrigin
 //@CrossOrigin(origins = "*")
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
 //@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/product")
 @RequiredArgsConstructor
