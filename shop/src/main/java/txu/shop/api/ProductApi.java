@@ -25,26 +25,22 @@ public class ProductApi extends BaseApi {
 
     private final ProductService productService;
 
-    @CrossOrigin(origins = "*")
     @PostMapping(consumes = "application/json")
     public ProductEntity createOrUpdate(@RequestBody CreateUpdateProductRequest createUpdateProductRequest){
         return productService.createOrUpdate(createUpdateProductRequest.getProduct(), createUpdateProductRequest.getCategories());
     }
 
-    @CrossOrigin(origins = "*")
     @DeleteMapping()
     public void delete(@RequestBody ProductRequest productRequest){
         productService.delete(productRequest.getProductId());
     }
 
-    @CrossOrigin(origins = "*")
     @PostMapping(value = "/search",  consumes = "application/json")
     public List<ProductEntity> search(@RequestBody SearchProductRequest searchProductRequest) {
         if (StringUtils.isNullOrEmpty(searchProductRequest.getKeySearch())){return null;}
         return filter(searchProductRequest);
     }
 
-    @CrossOrigin(origins = "*")
     @PostMapping(value = "/filter",  consumes = "application/json")
     public List<ProductEntity> filter(@RequestBody SearchProductRequest searchProductRequest) {
         return productService.searchOrfilter(searchProductRequest.getCategories() , searchProductRequest.getKeySearch());

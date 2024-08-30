@@ -15,7 +15,6 @@ public class UserApi {
 
     private final UserSevice userSevice;
 
-    @CrossOrigin(origins = "*")
     @PostMapping(value = "/register")
     public UserEntity register(@RequestBody UserEntity userEntity){
         return userSevice.createUser(userEntity);

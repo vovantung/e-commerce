@@ -21,7 +21,7 @@ import java.util.List;
 public class CategoryApi {
 
     private final CategoryService categoryService;
-    @CrossOrigin(origins = "*")
+
     @GetMapping
     public List<CategoryEntity> getAll(){
         return categoryService.getAll();
