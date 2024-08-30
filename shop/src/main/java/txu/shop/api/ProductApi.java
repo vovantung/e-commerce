@@ -20,7 +20,6 @@ import java.util.List;
 //@CrossOrigin(origins = "*")
 
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping("/product")
 @RequiredArgsConstructor
 public class ProductApi extends BaseApi {

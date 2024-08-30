@@ -20,7 +20,6 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*")
 @RequestMapping("/cartitem")
 public class CartItemApi extends BaseApi {
 
