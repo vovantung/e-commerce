@@ -15,7 +15,8 @@ import java.util.Date;
 import java.util.List;
 
 //@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+//@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "*")
 @Slf4j
 @RestController
 @RequiredArgsConstructor

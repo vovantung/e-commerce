@@ -6,7 +6,8 @@ import txu.shop.entity.UserEntity;
 import txu.shop.service.UserSevice;
 
 //@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
-@CrossOrigin(origins = "*", allowedHeaders = "*")
+//@CrossOrigin(origins = "*", allowedHeaders = "*")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/user")
 @RequiredArgsConstructor
