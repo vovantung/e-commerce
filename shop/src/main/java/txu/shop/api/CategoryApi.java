@@ -14,7 +14,6 @@ import java.util.List;
 //@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
 //@CrossOrigin(origins = "*")
-@CrossOrigin
 @Slf4j
 @RestController
 @RequiredArgsConstructor
@@ -22,7 +21,7 @@ import java.util.List;
 public class CategoryApi {
 
     private final CategoryService categoryService;
-    @CrossOrigin
+    @CrossOrigin(origins = "*")
     @GetMapping
     public List<CategoryEntity> getAll(){
         return categoryService.getAll();

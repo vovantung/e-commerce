@@ -8,7 +8,6 @@ import txu.shop.service.UserSevice;
 //@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
 //@CrossOrigin(origins = "*")
-@CrossOrigin
 @RestController
 @RequestMapping("/user")
 @RequiredArgsConstructor
@@ -16,7 +15,7 @@ public class UserApi {
 
     private final UserSevice userSevice;
 
-    @CrossOrigin
+    @CrossOrigin(origins = "*")
     @PostMapping(value = "/register")
     public UserEntity register(@RequestBody UserEntity userEntity){
         return userSevice.createUser(userEntity);
