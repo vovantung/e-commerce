@@ -9,9 +9,9 @@ import txu.shop.service.UserSevice;
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
 //@CrossOrigin(origins = "*")
 @RestController
-
 @RequestMapping("/user")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class UserApi {
 
     private final UserSevice userSevice;

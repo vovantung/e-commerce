@@ -22,6 +22,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/order")
+@CrossOrigin(origins = "*")
 public class OrderApi  extends BaseApi {
 
     private final OrderService orderService;

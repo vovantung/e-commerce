@@ -21,6 +21,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/cartitem")
+@CrossOrigin(origins = "*")
 public class CartItemApi extends BaseApi {
 
     private final CartItemService cartItemService;

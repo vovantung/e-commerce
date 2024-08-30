@@ -22,6 +22,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/product")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class ProductApi extends BaseApi {
 
     private final ProductService productService;
