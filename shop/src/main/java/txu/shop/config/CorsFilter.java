@@ -2,6 +2,7 @@ package txu.shop.config;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -12,7 +13,7 @@ import java.io.IOException;
  *
  * @author valeryyakovlev
  */
-@Component
+@Configuration
 public class CorsFilter implements Filter {
 
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {

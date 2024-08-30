@@ -20,6 +20,7 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 @RequestMapping("/cartitem")
 public class CartItemApi extends BaseApi {
 
@@ -30,7 +31,6 @@ public class CartItemApi extends BaseApi {
         return cartItemService.create(cartItemDto);
     }
 
-    @CrossOrigin(origins = "*")
     @GetMapping()
     public CartItemEntity getByUserIdProductId(String userId, String productId){
         return cartItemService.getByUerIdProductId(userId, productId);
