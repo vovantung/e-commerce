@@ -7,7 +7,8 @@ import txu.shop.service.UserSevice;
 //@CrossOrigin(origins = "https://main.d229jj886cbsbs.amplifyapp.com", allowedHeaders = "*")
 //@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
+@CrossOrigin
 @RestController
 @RequestMapping("/user")
 @RequiredArgsConstructor
@@ -15,6 +16,7 @@ public class UserApi {
 
     private final UserSevice userSevice;
 
+    @CrossOrigin
     @PostMapping(value = "/register")
     public UserEntity register(@RequestBody UserEntity userEntity){
         return userSevice.createUser(userEntity);

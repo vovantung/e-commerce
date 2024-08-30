@@ -17,7 +17,8 @@ import java.util.List;
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
 //@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
+@CrossOrigin
 @RestController
 @RequestMapping("/product")
 @RequiredArgsConstructor
@@ -25,22 +26,26 @@ public class ProductApi extends BaseApi {
 
     private final ProductService productService;
 
+    @CrossOrigin
     @PostMapping(consumes = "application/json")
     public ProductEntity createOrUpdate(@RequestBody CreateUpdateProductRequest createUpdateProductRequest){
         return productService.createOrUpdate(createUpdateProductRequest.getProduct(), createUpdateProductRequest.getCategories());
     }
 
+    @CrossOrigin
     @DeleteMapping()
     public void delete(@RequestBody ProductRequest productRequest){
         productService.delete(productRequest.getProductId());
     }
 
+    @CrossOrigin
     @PostMapping(value = "/search",  consumes = "application/json")
     public List<ProductEntity> search(@RequestBody SearchProductRequest searchProductRequest) {
         if (StringUtils.isNullOrEmpty(searchProductRequest.getKeySearch())){return null;}
         return filter(searchProductRequest);
     }
 
+    @CrossOrigin
     @PostMapping(value = "/filter",  consumes = "application/json")
     public List<ProductEntity> filter(@RequestBody SearchProductRequest searchProductRequest) {
         return productService.searchOrfilter(searchProductRequest.getCategories() , searchProductRequest.getKeySearch());
