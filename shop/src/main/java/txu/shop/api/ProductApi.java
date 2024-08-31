@@ -19,10 +19,11 @@ import java.util.List;
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
 //@CrossOrigin(origins = "*")
 
+
+@CrossOrigin(origins = "https://main.d229jj886cbsbs.amplifyapp.com", allowCredentials = "true", maxAge = 86400, allowedHeaders = "*")
 @RestController
 @RequestMapping("/product")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*")
 public class ProductApi extends BaseApi {
 
     private final ProductService productService;

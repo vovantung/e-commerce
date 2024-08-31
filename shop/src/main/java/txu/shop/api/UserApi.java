@@ -8,10 +8,11 @@ import txu.shop.service.UserSevice;
 //@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
 //@CrossOrigin(origins = "*")
+
+@CrossOrigin(origins = "https://main.d229jj886cbsbs.amplifyapp.com", allowCredentials = "true", maxAge = 86400, allowedHeaders = "*")
 @RestController
 @RequestMapping("/user")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*")
 public class UserApi {
 
     private final UserSevice userSevice;

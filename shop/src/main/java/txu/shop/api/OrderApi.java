@@ -18,11 +18,11 @@ import java.util.List;
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
 //@CrossOrigin(origins = "*")
 
+@CrossOrigin(origins = "https://main.d229jj886cbsbs.amplifyapp.com", allowCredentials = "true", maxAge = 86400, allowedHeaders = "*")
 @Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/order")
-@CrossOrigin(origins = "*")
 public class OrderApi  extends BaseApi {
 
     private final OrderService orderService;

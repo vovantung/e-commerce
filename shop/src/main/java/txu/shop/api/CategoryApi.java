@@ -14,11 +14,12 @@ import java.util.List;
 //@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
 //@CrossOrigin(origins = "*")
+
+@CrossOrigin(origins = "https://main.d229jj886cbsbs.amplifyapp.com", allowCredentials = "true", maxAge = 86400, allowedHeaders = "*")
 @Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/category")
-@CrossOrigin(origins = "*")
 public class CategoryApi {
 
     private final CategoryService categoryService;

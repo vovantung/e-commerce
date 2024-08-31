@@ -9,7 +9,6 @@ import txu.shop.dto.CartDto;
 import txu.shop.dto.CartItemDto;
 import txu.shop.entity.CartItemEntity;
 import txu.shop.service.CartItemService;
-//import txu.shop.util.BaseApi;
 
 import java.util.List;
 
@@ -17,11 +16,12 @@ import java.util.List;
 //@CrossOrigin(origins = "https://main.d229jj886cbsbs.amplifyapp.com", allowedHeaders = "*")
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
 //@CrossOrigin(origins = "*")
+
+@CrossOrigin(origins = "https://main.d229jj886cbsbs.amplifyapp.com", allowCredentials = "true", maxAge = 86400, allowedHeaders = "*")
 @Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/cartitem")
-@CrossOrigin(origins = "*")
 public class CartItemApi extends BaseApi {
 
     private final CartItemService cartItemService;
