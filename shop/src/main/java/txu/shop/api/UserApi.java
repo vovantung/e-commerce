@@ -17,7 +17,7 @@ public class UserApi {
 
     private final UserSevice userSevice;
 
-    @PostMapping(value = "/register")
+    @PostMapping(value = "register")
     public UserEntity register(@RequestBody UserEntity userEntity){
         return userSevice.createUser(userEntity);
     }

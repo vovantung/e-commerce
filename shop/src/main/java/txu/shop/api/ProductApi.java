@@ -33,18 +33,18 @@ public class ProductApi extends BaseApi {
         return productService.createOrUpdate(createUpdateProductRequest.getProduct(), createUpdateProductRequest.getCategories());
     }
 
-    @DeleteMapping()
+    @DeleteMapping(consumes = "application/json")
     public void delete(@RequestBody ProductRequest productRequest){
         productService.delete(productRequest.getProductId());
     }
 
-    @PostMapping(value = "/search",  consumes = "application/json")
+    @PostMapping(value = "search",  consumes = "application/json")
     public List<ProductEntity> search(@RequestBody SearchProductRequest searchProductRequest) {
         if (StringUtils.isNullOrEmpty(searchProductRequest.getKeySearch())){return null;}
         return filter(searchProductRequest);
     }
 
-    @PostMapping(value = "/filter",  consumes = "application/json")
+    @PostMapping(value = "filter",  consumes = "application/json")
     public List<ProductEntity> filter(@RequestBody SearchProductRequest searchProductRequest) {
         return productService.searchOrfilter(searchProductRequest.getCategories() , searchProductRequest.getKeySearch());
     }

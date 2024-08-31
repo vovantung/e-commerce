@@ -28,52 +28,52 @@ public class OrderApi  extends BaseApi {
     private final OrderService orderService;
     private final OrderItemsService orderItemsService;
 
-    @GetMapping("/{userId}/{from}/{to}/{isAllOrder}")
+    @GetMapping("{userId}/{from}/{to}/{isAllOrder}")
     public List<OrderEntity> getByUserId(@PathVariable String userId, @PathVariable Date from, @PathVariable Date to,@PathVariable boolean isAllOrder){
         return orderService.getByUserId(userId,from,to, isAllOrder);
     }
 
-    @GetMapping("/statistical/{from}/{to}")
+    @GetMapping("statistical/{from}/{to}")
     public List<StatisticalDTO> statistical(@PathVariable Date from, @PathVariable Date to){
         return orderService.statistical( from,  to);
     }
 
-    @GetMapping("/items/{orderId}")
+    @GetMapping("items/{orderId}")
     public List<OrderItemEntity> getOrderItems(@PathVariable String orderId){
         return orderService.getOrderItems(orderId);
     }
 
-    @PostMapping()
+    @PostMapping(consumes = "application/json")
     public OrderEntity placeOrder(@RequestBody PlaceOrderRequest placeOrderRequest){
         return orderService.placeOrder(placeOrderRequest.getUsername(), placeOrderRequest.getNote());
     }
 
-    @PutMapping("/note")
+    @PutMapping( value = "note", consumes = "application/json")
     public void updateNote(@RequestBody UpdateNoteRequest updateNoteRequest){
         orderService.updateNote(updateNoteRequest.getOrderId(), updateNoteRequest.getNote());
     }
 
-    @PutMapping("/paided")
+    @PutMapping(value = "paided", consumes = "application/json")
     public void updatePaided(@RequestBody UpdatePaidedRequest updatePaidedRequest){
         orderService.updatePaided(updatePaidedRequest.getOrderId(), updatePaidedRequest.getPaided());
     }
 
-    @PutMapping("/delivered")
+    @PutMapping(value = "delivered", consumes = "application/json")
     public void updateDelivered(@RequestBody UpdateDeliveredRequest updateDeliveredRequest){
         orderService.updateDelivered(updateDeliveredRequest.getOrderId(), updateDeliveredRequest.getDelivered());
     }
 
-    @PutMapping()
+    @PutMapping(consumes = "application/json")
     public void updateOrder(@RequestBody UpdateOrderRequest updateOrderRequest){
         orderService.updateOrder(updateOrderRequest.getOrderId(), updateOrderRequest.getUsername());
     }
 
-    @DeleteMapping
+    @DeleteMapping(consumes = "application/json")
     public void deleteOrder(@RequestBody DeleteOrderRequest deleteOrderRequest){
         orderService.deleteOrder(deleteOrderRequest.getOrderId());
     }
 
-    @DeleteMapping("/item/{orderId}/{productId}")
+    @DeleteMapping("item/{orderId}/{productId}")
     public void removeOrderItem(@PathVariable String orderId, @PathVariable String productId){
         orderItemsService.removeByOrderIdProductId(orderId, productId);
     }

@@ -36,7 +36,7 @@ public class CartItemApi extends BaseApi {
         return cartItemService.getByUerIdProductId(userId, productId);
     }
 
-    @GetMapping("/{userId}")
+    @GetMapping("{userId}")
     public List<CartItemEntity> getByUserId(@PathVariable String userId){
          return cartItemService.getByUerId(userId);
 
@@ -47,12 +47,12 @@ public class CartItemApi extends BaseApi {
        return cartItemService.deleteByUserId(userId);
     }
 
-    @DeleteMapping("/{userId}/{productId}")
+    @DeleteMapping("{userId}/{productId}")
     public int deleteByUserIdAndProductId(@PathVariable String userId, @PathVariable String productId){
          return cartItemService.deleteByUserIdAndProductId(userId, productId);
     }
 
-    @PostMapping(value = "/update-quantity", consumes = "application/json")
+    @PostMapping(value = "update-quantity", consumes = "application/json")
     public CartItemEntity updateQuantity(@RequestBody CartDto cartDto){
         return cartItemService.updateQuantity(cartDto.getUserId(), cartDto.getProductId(), cartDto.getQuantity());
     }
