@@ -9,7 +9,7 @@ import txu.shop.service.UserSevice;
 //@CrossOrigin(origins = "*", allowedHeaders = "*")
 //@CrossOrigin(origins = "*")
 
-@CrossOrigin(origins = "*", allowCredentials = "false", maxAge = 86400, allowedHeaders = "*")
+//@CrossOrigin(origins = "*", allowCredentials = "false", maxAge = 86400, allowedHeaders = "*")
 @RestController
 @RequestMapping("/user")
 @RequiredArgsConstructor
