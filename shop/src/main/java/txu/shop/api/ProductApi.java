@@ -20,7 +20,7 @@ import java.util.List;
 //@CrossOrigin(origins = "*")
 
 
-@CrossOrigin(origins = "https://main.d229jj886cbsbs.amplifyapp.com", allowCredentials = "true", maxAge = 86400, allowedHeaders = "*")
+@CrossOrigin(origins = "*", allowCredentials = "false", maxAge = 86400, allowedHeaders = "*")
 @RestController
 @RequestMapping("/product")
 @RequiredArgsConstructor
