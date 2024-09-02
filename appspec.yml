@@ -3,8 +3,8 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:ap-southeast-1:211125364313:task-definition/etd-app1:34"
+        TaskDefinition: "arn:aws:ecs:ap-southeast-1:211125364313:task-definition/etd-app1:36"
         #TaskDefinition: <TASK_DEFINITION>
         LoadBalancerInfo:
           ContainerName: "container-app1"
-          ContainerPort: 443
+          ContainerPort: 8080
