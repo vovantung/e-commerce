@@ -12,6 +12,6 @@ public class Api {
     private String url_db;
     @GetMapping("/health-check")
     public String healthcheck(){
-        return "vovantung" ;
+        return "phanthixuyen" ;
     }
 }
